@@ -20,6 +20,13 @@
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
       </tbody>
+     <% else %>  
+     <tbody>
+     <tr class="alert alert-danger">
+     <td colspan="5" style="text-align: center">Your cart is empty... get <a href="/">shopping!</a></td>
+     </tr>
+     </tbody>
+     <%end%>
       <tfoot>
         <tr>
           <th colspan="4">
@@ -30,13 +37,6 @@
           </th>
         </tr>
       </tfoot>
-     <% else %>  
-     <tbody>
-     <tr>
-     <td>Your cart is empty... get <a href="/">shopping!</a></td>
-     </tr>
-     </tbody>
-     <%end%>
     </table>
   </div>
 
