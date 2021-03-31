@@ -14,6 +14,7 @@
           <th>Price</th>
         </tr>
       </thead>
+     <% if enhanced_cart.length > 0 %> 
       <tbody>
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
@@ -29,6 +30,13 @@
           </th>
         </tr>
       </tfoot>
+     <% else %>  
+     <tbody>
+     <tr>
+     <td>Your cart is empty... get <a href="/">shopping!</a></td>
+     </tr>
+     </tbody>
+     <%end%>
     </table>
   </div>
 
