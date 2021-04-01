@@ -15,3 +15,22 @@ body {
 form.button_to {
   display: inline;
 }
+
+.divider {
+  position: relative;
+  top: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin: auto;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
