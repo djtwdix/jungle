@@ -19,7 +19,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages).to include("Name can't be blank")
     end 
 
-    it "is not valid with no category" do
+    it "is not valid with no price" do
       @category = Category.new(name: "Furniture")
       @product = Product.new(name: "Product", price: nil, 
                              category: nil,
