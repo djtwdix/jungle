@@ -59,5 +59,42 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
 
+    describe '.authenticate_with_credentials' do
+      it "will login if user exists and credentials are valid" do
+        @user = User.new(email: "email@email.com", first_name: "first", last_name: "last", 
+          password: "password", password_confirmation: "password")
+        @user.save
+        
+        isValid = User.authenticate_with_credentials("email@email.com", "password")
+        expect(isValid).to_not be(nil)
+      end
+
+      it "will login if user exists and credentials are valid even with whitespace" do
+        @user = User.new(email: "email@email.com", first_name: "first", last_name: "last", 
+          password: "password", password_confirmation: "password")
+        @user.save
+        
+        isValid = User.authenticate_with_credentials(" email@email.com ", "password")
+        expect(isValid).to_not be(nil)
+      end
+
+      it "will login if user exists and credentials are valid even if case doesn't match" do
+        @user = User.new(email: "email@EMAIL.com", first_name: "first", last_name: "last", 
+          password: "password", password_confirmation: "password")
+        @user.save
+        
+        isValid = User.authenticate_with_credentials("EMAIL@email.com", "password")
+        expect(isValid).to_not be(nil)
+      end
+
+      it "will not login if user exists and credentials are invalid" do
+        @user = User.new(email: "email@email.com", first_name: "first", last_name: "last", 
+          password: "password", password_confirmation: "password")
+        @user.save
+        
+        isValid = User.authenticate_with_credentials("email@email.com", "pard")
+        expect(isValid).to be(nil)
+      end
+    end
   end
 end
