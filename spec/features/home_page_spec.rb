@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'database_cleaner'
 
 RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
 
