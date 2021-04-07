@@ -2,6 +2,22 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+
+![signup](https://github.com/djtwdix/jungle/blob/master/screenshots/1.png?raw=true)
+![login](https://github.com/djtwdix/jungle/blob/master/screenshots/2.png?raw=true)
+![products](https://github.com/djtwdix/jungle/blob/master/screenshots/3.png?raw=true)
+![product_details](https://github.com/djtwdix/jungle/blob/master/screenshots/4.png?raw=true)
+![empty_cart](https://github.com/djtwdix/jungle/blob/master/screenshots/5.png?raw=true)
+![cart_with_item](https://github.com/djtwdix/jungle/blob/master/screenshots/6.png?raw=true)
+![admin_dashboard](https://github.com/djtwdix/jungle/blob/master/screenshots/7.png?raw=true)
+![admin_products](https://github.com/djtwdix/jungle/blob/master/screenshots/8.png?raw=true)
+![admin_categories](https://github.com/djtwdix/jungle/blob/master/screenshots/9.png?raw=true)
+![about](https://github.com/djtwdix/jungle/blob/master/screenshots/10.png?raw=true)
+
+
+
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
